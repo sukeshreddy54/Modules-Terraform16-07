@@ -1,6 +1,7 @@
 resource "aws_instance" "web-1" {
     ami = var.imagename
     instance_type = "t2.micro"
+    key_name = "awswebservice"
     subnet_id = var.subnetid
     vpc_security_group_ids = ["${var.sgid}"]
     associate_public_ip_address = true	
